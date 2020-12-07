@@ -1,0 +1,258 @@
+{
+  "inboundAirlines": [
+    {
+      "code": "UU",
+      "name": "Air Austral",
+      "flightNumbers": [
+        "111",
+        "222",
+        "333",
+        "4544",
+        "5555",
+        "6666",
+        "645",
+        "2121",
+        "485",
+        "1234",
+        "5643",
+        "4545",
+        "778",
+        "8877",
+        "9987",
+        "5115",
+        "775",
+        "2112",
+        "1134",
+        "5545",
+        "45455",
+        "231485",
+        "54642"
+      ]
+    },
+    {
+      "code": "AF",
+      "name": "Air France",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "MK",
+      "name": "Air Mauritius",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "HM",
+      "name": "Air Seychelles",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "OS",
+      "name": "Austrian Airlines",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "BA",
+      "name": "British Airways",
+      "flightNumbers": ["63"]
+    },
+    {
+      "code": "DE",
+      "name": "Condor",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "WK",
+      "name": "Edelweiss Air",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "EK",
+      "name": "Emirates",
+      "flightNumbers": ["705"]
+    },
+    {
+      "code": "ET",
+      "name": "Ethiopian",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "EY",
+      "name": "Etihad",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "KQ",
+      "name": "Kenya Airways",
+      "flightNumbers": ["111", "222", "333"]
+    },
+    {
+      "code": "QR",
+      "name": "Qatar Airways",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "UL",
+      "name": "SriLankan Airlines",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "TK",
+      "name": "Turkish Airlines",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "PJ",
+      "name": "Private Jet",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T1",
+      "name": "Test 1",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T2",
+      "name": "Test 2",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T3",
+      "name": "Test 3",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T4",
+      "name": "Test 4",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T5",
+      "name": "Test 5",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T6",
+      "name": "Test 6",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T7",
+      "name": "Test 7",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T8",
+      "name": "Test 8",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T9",
+      "name": "Test 9",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T10",
+      "name": "Test 10",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T11",
+      "name": "Test 11",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T12",
+      "name": "Test 12",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T13",
+      "name": "Test 13",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T14",
+      "name": "Test 14",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T15",
+      "name": "Test 15",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T16",
+      "name": "Test 16",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T17",
+      "name": "Test 17",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T18",
+      "name": "Test 18",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T19",
+      "name": "Test 19",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T20",
+      "name": "Test 20",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T21",
+      "name": "Test 21",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T22",
+      "name": "Test 22",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T23",
+      "name": "Test 23",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T24",
+      "name": "Test 24",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T25",
+      "name": "Test 25",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T26",
+      "name": "Test 26",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T27",
+      "name": "Test 27",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T28",
+      "name": "Test 28",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T29",
+      "name": "Test 29",
+      "flightNumbers": ["555", "14454"]
+    },
+    {
+      "code": "T30",
+      "name": "Test 30",
+      "flightNumbers": ["555", "14454"]
+    }
+  ]
+}

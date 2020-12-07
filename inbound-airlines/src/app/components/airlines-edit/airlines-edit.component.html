@@ -1,0 +1,75 @@
+<form [formGroup]="airlineForm" (ngSubmit)="onSubmit()">
+  <mat-card [ngClass]="cardTheme">
+    <div style="display: flex; flex-direction: column; margin-top: 10px">
+      <mat-card-title
+        style="margin-left: 15px; font-size: 25px; min-width: 250px"
+        >{{ formTitle }}</mat-card-title
+      >
+      <mat-form-field appearance="fill">
+        <label>{{ airlineCodeTranslation }}</label>
+        <br />
+        <input formControlName="airlineCode" matInput />
+        <mat-error *ngIf="airlineForm.get('airlineCode').invalid">
+          {{ getAirlineCodeErrorMessage() }}
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <label>{{ airlineNameTranslation }}</label>
+        <br />
+        <input formControlName="airlineName" matInput />
+        <mat-error *ngIf="airlineForm.get('airlineName').invalid">
+          You must enter a value
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field style="width: 100%" appearance="fill">
+        <label style="padding-bottom: 11px">{{
+          flightNumbersTranslation
+        }}</label>
+        <br /><br *ngIf="flightNumbers.length != 0" />
+        <mat-chip-list #flightNumbersChips aria-label="Flight Number Selection">
+          <mat-chip
+            *ngFor="let flightNumber of flightNumbers"
+            [selectable]="selectable"
+            [removable]="removable"
+            (removed)="onRemoveChip(flightNumber)"
+          >
+            {{ flightNumber }}
+            <mat-icon style="margin-top: 0px" matChipRemove *ngIf="removable"
+              >cancel</mat-icon
+            >
+          </mat-chip>
+          <input
+            [matChipInputFor]="flightNumbersChips"
+            [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+            [matChipInputAddOnBlur]="addOnBlur"
+            (matChipInputTokenEnd)="onAddChip($event)"
+            formControlName="flightNumbers"
+          />
+        </mat-chip-list>
+        <mat-error *ngIf="airlineForm.get('flightNumbers').invalid"
+          >Maximum 4 characters</mat-error
+        >
+      </mat-form-field>
+    </div>
+
+    <button
+      mat-button
+      style="
+        background-color: rgb(113, 182, 68);
+        color: white;
+        margin-right: 5px;
+        margin-left: 12px;
+      "
+    >
+      {{ saveButtonText }}
+    </button>
+    <button
+      mat-button
+      (click)="onCancel()"
+      style="background-color: rgb(66, 66, 66); color: white"
+      [ngStyle]="cancelButtonStyle"
+    >
+      {{ cancelButtonText }}
+    </button>
+  </mat-card>
+</form>

@@ -1,0 +1,9 @@
+.container {
+  .col-1 {
+    width: 20rem;
+  }
+  button:disabled {
+    background-color: gray;
+    border-color: gray;
+  }
+}

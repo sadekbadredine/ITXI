@@ -1,0 +1,16 @@
+<div *ngIf="airlineCode" class="container">
+  <div *ngIf="logoImagePath" style="display: flex; flex-direction: row">
+    <div>
+      <img [src]="logoImagePath" [ngStyle]="logoStyle" />
+    </div>
+    <div style="margin-top: 5px">
+      {{ airlineCode }}
+    </div>
+  </div>
+  <div *ngIf="!logoImagePath" style="display: flex; flex-direction: row">
+    <div class="no-image" [ngStyle]="airlineCodeNoImageStyle">
+      <div class="airline-code">{{ airlineCode }}</div>
+    </div>
+    {{ airlineCode }}
+  </div>
+</div>

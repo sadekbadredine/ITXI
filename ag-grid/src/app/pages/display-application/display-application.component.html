@@ -1,0 +1,19 @@
+<div id="container1">
+  <div id="container2">
+    <i
+      (click)="onToggleView()"
+      [ngStyle]="iconMargin"
+      class="fa fa-th-large"
+    ></i>
+    <div *ngIf="isGridView" class="flex-container">
+      <div *ngFor="let application of applications">
+        <div class="flex-item">
+          <app-card-component [application]="application"></app-card-component>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!isGridView" style="margin-top: 10px">
+      <app-table-component></app-table-component>
+    </div>
+  </div>
+</div>

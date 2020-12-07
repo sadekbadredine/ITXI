@@ -1,0 +1,19 @@
+{
+  "INBOUND AIRLINES": "Aerolíneas entrantes {{ value }}",
+  "ADD NEW": "Añadir nueva {{ value }}",
+  "AIRLINE CODE": "Código de aerolínea {{ value }}",
+  "AIRLINE NAME": "Nombre de la aerolínea {{ value }}",
+  "FLIGHT NUMBERS": "Números de vuelo {{ value }}",
+  "ACTIONS": "Comportamiento {{ value }}",
+  "SWITCH LANGUAGE": "Cambiar idioma {{ value }}",
+  "DARK": "Oscuro {{ value }}",
+  "LIGHT": "Ligero {{ value }}",
+  "CANCEL": "Cancelar {{ value }}",
+  "SAVE": "Salvar {{ value }}",
+  "FORM TITLE": "Agregar / editar Aerolíneas Entrantes {{ value }}",
+  "HEADER TITLE": "Plataforma de gestión de visitantes {{ value }}",
+  "FILTER": "Filtrar {{ value }}",
+  "REQUIRED ERROR": "Debes ingresar un valor {{ value }}",
+  "MAX LENGTH ERROR": "El código de la aerolínea no debe exceder los 3 caracteres {{ value }}",
+  "MIN LENGTH ERROR": "El código de la aerolínea debe tener al menos 2 caracteres {{ value }}"
+}

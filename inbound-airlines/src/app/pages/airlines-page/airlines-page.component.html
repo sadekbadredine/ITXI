@@ -1,0 +1,30 @@
+<mat-card
+  class="card-dark"
+  appChangeTheme
+  [selectedTheme]="theme"
+  [ngStyle]="cardWidth"
+>
+  <div style="display: flex; flex-direction: row; margin-top: 10px">
+    <mat-card-title
+      [ngStyle]="titleFontSize"
+      style="margin-left: 15px; min-width: 300px"
+      >{{ title }}</mat-card-title
+    >
+    <button
+      mat-button
+      (click)="onAddAilrline()"
+      [ngStyle]="addNewButtonMargin"
+      style="background-color: #607d8b; color: white; height: 35px"
+    >
+      <i
+        class="fa fa-plus-circle fa-lg"
+        style="color: white; position: relative; margin-top: -3px"
+      ></i>
+      <!-- <mat-icon>add_circle</mat-icon> -->
+      {{ buttonText }}
+    </button>
+  </div>
+  <mat-card-content>
+    <app-airlines-table></app-airlines-table>
+  </mat-card-content>
+</mat-card>

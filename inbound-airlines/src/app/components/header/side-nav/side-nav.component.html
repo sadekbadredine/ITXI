@@ -1,0 +1,34 @@
+<mat-sidenav-container
+  style="margin: 0"
+  class="example-container"
+  (backdropClick)="toggleSideNav()"
+>
+  <!-- opened -->
+  <mat-sidenav
+    #sidenav
+    disableClose
+    position="end"
+    [ngStyle]="sideNavBackgroundColor"
+  >
+    <p style="margin-left: 65px">
+      <button
+        mat-button
+        (click)="switchToDarkMode()"
+        [ngStyle]="darkModeButton"
+      >
+        {{ darkButtonText }}
+      </button>
+      <button
+        mat-button
+        (click)="switchToLightMode()"
+        [ngStyle]="lightModeButton"
+      >
+        {{ lighButtonText }}
+      </button>
+    </p>
+    <app-side-nav-content></app-side-nav-content>
+  </mat-sidenav>
+  <mat-sidenav-content [ngStyle]="contentBackgroundColor">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

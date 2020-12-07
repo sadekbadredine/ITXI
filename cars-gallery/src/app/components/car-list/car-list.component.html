@@ -1,0 +1,29 @@
+<div class="record">
+  <div class="col-xs-12">
+    <button class="btn btn-primary" (click)="onAddCar()">New Car</button>
+  </div>
+</div>
+<div class="record">
+  <div class="col-xs-12">
+    <hr />
+    <!-- <label for="filter">Search</label> -->
+    <input
+      id="filter"
+      type="text"
+      class="form-control"
+      placeholder="search"
+      #input
+      [(ngModel)]="input.value"
+    />
+  </div>
+</div>
+<div class="record">
+  <div class="col-xs-12">
+    <hr />
+    <app-car-item
+      *ngFor="let carElement of cars | filter: input.value; let i = index"
+      [car]="carElement"
+      [carId]="i"
+    ></app-car-item>
+  </div>
+</div>

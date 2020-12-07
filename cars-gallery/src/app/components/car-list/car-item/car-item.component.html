@@ -1,0 +1,19 @@
+<a
+  [routerLink]="[carId]"
+  routerLinkActive="active"
+  class="list-group-item clearfix"
+  style="cursor: pointer; width: 400px"
+>
+  <div class="pull-left">
+    <h3 class="list-group-item-heading">{{ car.name }}</h3>
+    <h5 class="list-group-item-text">Model: {{ car.model }}</h5>
+  </div>
+  <span class="pull-right">
+    <img
+      [src]="car.imagePath"
+      alt=""
+      class="img-responsive"
+      style="max-height: 100px"
+    />
+  </span>
+</a>

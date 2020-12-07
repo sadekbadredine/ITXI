@@ -1,0 +1,242 @@
+<div style="margin-left: 160px; margin-bottom: 5px">
+  <button mat-button [ngStyle]="darkButtonStyle" (click)="setAppDarkTheme()">
+    Dark
+  </button>
+  <button mat-button [ngStyle]="lightButtonStyle" (click)="setAppLightTheme()">
+    Light
+  </button>
+</div>
+<mat-card class="mat-card" [ngStyle]="cardBackgroundColor">
+  <mat-card-header>
+    <div id="applicationCountHeader">
+      <div><img [src]="logo" class="img" /></div>
+      <div id="applicationCountHeaderTitle">
+        <div [ngStyle]="cardHeaderTextColor">{{ title }}</div>
+        <div [ngStyle]="cardHeaderTextColor">{{ subtitle }}</div>
+      </div>
+      <div id="totalPax">
+        <svg width="400" height="180">
+          <rect
+            x="90"
+            y="5"
+            rx="7"
+            ry="7"
+            width="100"
+            height="40"
+            style="fill: rgb(239, 239, 239)"
+          />
+          <svg
+            id="person"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="black"
+            width="30px"
+            height="30px"
+            x="102"
+            y="9"
+            [attr.x]="setPersonAxis(totalPax)"
+          >
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+            />
+          </svg>
+          <text
+            id="totalPaxText"
+            *ngIf="totalPax > 0"
+            y="31"
+            fill="black"
+            [attr.x]="setTotalCountAxis(totalPax)"
+            [attr.font-size]="setCountFontSize(totalPax)"
+          >
+            {{ totalPax }}
+          </text>
+        </svg>
+      </div>
+    </div>
+  </mat-card-header>
+  <mat-card-content>
+    <div id="applicationTypeCountBody">
+      <div class="column">
+        <div *ngIf="pendingCount > 0">
+          <svg width="200" height="50">
+            <rect
+              x="0"
+              y="5"
+              rx="7"
+              ry="7"
+              width="55"
+              height="35"
+              style="fill: rgb(239, 239, 239)"
+            />
+            <text
+              x="7"
+              [attr.x]="setCountAxis(pendingCount)"
+              y="30"
+              fill="black"
+              [attr.font-size]="setCountFontSize(pendingCount)"
+            >
+              {{ pendingCount }}
+            </text>
+            <text
+              x="70"
+              y="30"
+              style="font-size: 20px"
+              [attr.fill]="countTextColor"
+            >
+              Pending
+            </text>
+          </svg>
+        </div>
+        <div *ngIf="approvedCount > 0">
+          <svg width="200" height="50">
+            <rect
+              x="0"
+              y="5"
+              rx="7"
+              ry="7"
+              width="55"
+              height="35"
+              style="fill: rgb(141, 195, 140)"
+            />
+            <text
+              y="30"
+              fill="white"
+              [attr.x]="setCountAxis(approvedCount)"
+              [attr.font-size]="setCountFontSize(approvedCount)"
+            >
+              {{ approvedCount }}
+            </text>
+            <text
+              x="70"
+              y="30"
+              fill="white"
+              [attr.fill]="countTextColor"
+              style="font-size: 20px"
+            >
+              Approved
+            </text>
+          </svg>
+        </div>
+        <div *ngIf="rejectedCount > 0">
+          <svg width="200" height="50">
+            <rect
+              x="0"
+              y="5"
+              rx="7"
+              ry="7"
+              width="55"
+              height="35"
+              style="fill: rgb(161, 21, 240)"
+            />
+            <text
+              y="30"
+              fill="white"
+              [attr.x]="setCountAxis(rejectedCount)"
+              [attr.font-size]="setCountFontSize(rejectedCount)"
+            >
+              {{ rejectedCount }}
+            </text>
+            <text
+              x="70"
+              y="30"
+              [attr.fill]="countTextColor"
+              style="font-size: 20px"
+            >
+              Rejected
+            </text>
+          </svg>
+        </div>
+      </div>
+      <div class="column">
+        <div *ngIf="questionCount > 0">
+          <svg width="200" height="50">
+            <rect
+              x="0"
+              y="5"
+              rx="7"
+              ry="7"
+              width="55"
+              height="35"
+              style="fill: rgb(255, 216, 117)"
+            />
+            <text
+              y="30"
+              fill="white"
+              [attr.x]="setCountAxis(questionCount)"
+              [attr.font-size]="setCountFontSize(questionCount)"
+            >
+              {{ questionCount }}
+            </text>
+            <text
+              x="70"
+              y="30"
+              [attr.fill]="countTextColor"
+              style="font-size: 20px"
+            >
+              Question
+            </text>
+          </svg>
+        </div>
+        <div *ngIf="examineCount > 0">
+          <svg width="200" height="50">
+            <rect
+              x="0"
+              y="5"
+              rx="7"
+              ry="7"
+              width="55"
+              height="35"
+              style="fill: rgb(255, 153, 52)"
+            />
+            <text
+              y="30"
+              fill="white"
+              [attr.x]="setCountAxis(examineCount)"
+              [attr.font-size]="setCountFontSize(examineCount)"
+            >
+              {{ examineCount }}
+            </text>
+            <text
+              x="70"
+              y="30"
+              [attr.fill]="countTextColor"
+              style="font-size: 20px"
+            >
+              Examine
+            </text>
+          </svg>
+        </div>
+        <div *ngIf="quarantineCount > 0">
+          <svg width="200" height="50">
+            <rect
+              x="0"
+              y="5"
+              rx="7"
+              ry="7"
+              width="55"
+              height="35"
+              style="fill: rgb(254, 0, 23)"
+            />
+            <text
+              y="30"
+              fill="white"
+              [attr.x]="setCountAxis(quarantineCount)"
+              [attr.font-size]="setCountFontSize(quarantineCount)"
+            >
+              {{ quarantineCount }}
+            </text>
+            <text
+              x="70"
+              y="30"
+              [attr.fill]="countTextColor"
+              style="font-size: 20px"
+            >
+              Quarantine
+            </text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

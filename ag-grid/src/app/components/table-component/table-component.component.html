@@ -1,0 +1,14 @@
+<ag-grid-angular
+  style="margin: 15px; height: 500px; font-size: 13px"
+  class="ag-theme-alpine-dark"
+  [columnDefs]="columnDefs"
+  [pagination]="true"
+  [paginationPageSize]="3"
+  [defaultColDef]="defaultColDef"
+  [sideBar]="sideBar"
+  [frameworkComponents]="frameworkComponents"
+  (columnResized)="onColumnResized($event)"
+  (gridReady)="onGridReady($event)"
+  (toolPanelVisibleChanged)="toolPanelVisibleChanged()"
+>
+</ag-grid-angular>

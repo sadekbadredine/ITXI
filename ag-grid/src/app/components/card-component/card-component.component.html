@@ -1,0 +1,57 @@
+<mat-card [ngClass]="cardClass" style="background-color: rgb(48, 48, 48)">
+  <div class="flex-column">
+    <div class="flex-row">
+      <div class="flex-column">
+        <img mat-card-image [src]="application.imagePath" />
+      </div>
+      <div class="flex-column">
+        <div style="margin-left: 25px; margin-top: -1px">
+          <mat-card-subtitle style="font-size: 14px; margin-bottom: 5px"
+            >Ref.{{ application.ref }}</mat-card-subtitle
+          >
+          <mat-card-subtitle style="font-size: 12px"
+            >Submitted: {{ application.submittedTime }}</mat-card-subtitle
+          >
+          <div class="flex-column" style="margin-top: 20px">
+            <mat-card-title class="name" style="margin-top: -5px">{{
+              application.name
+            }}</mat-card-title>
+            <mat-card-title class="gender-age"
+              >{{ application.gender }}, {{ application.age }}</mat-card-title
+            >
+          </div>
+          <div class="flex-row" id="nationality-flight">
+            <div class="flex-column" style="margin-right: 35px">
+              <div class="muted">Nationality</div>
+              <div>{{ application.nationality }}</div>
+            </div>
+            <div class="flex-column">
+              <div class="muted">Flight #</div>
+              <app-flight-renderer
+                [logoStyle]="logoStyle"
+                [flight]="application.flight"
+              ></app-flight-renderer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex-row" style="margin-top: 4px; margin-bottom: 5px">
+      <div class="flex-column" style="margin-right: 67px; margin-left: -5px">
+        <div class="muted">Type</div>
+        <div>{{ application.type }}</div>
+      </div>
+      <div class="flex-column" style="margin-right: 5px; margin-left: 6px">
+        <div class="muted">Arrival Date</div>
+        <div style="min-width: 100px">{{ application.arrivalDate }}</div>
+      </div>
+      <div class="flex-column">
+        <div class="flex-column" style="margin-left: 50px; margin-top: 2px">
+          <app-status-renderer
+            [status]="application.status"
+          ></app-status-renderer>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-card>

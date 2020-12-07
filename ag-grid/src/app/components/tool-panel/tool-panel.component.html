@@ -1,0 +1,12 @@
+<div>
+  <ul>
+    <li *ngFor="let column of columns">
+      <mat-checkbox
+        #option
+        (change)="onNgModelChange(option, column)"
+        [checked]="!column.hide"
+        >{{ column.colId }}</mat-checkbox
+      >
+    </li>
+  </ul>
+</div>

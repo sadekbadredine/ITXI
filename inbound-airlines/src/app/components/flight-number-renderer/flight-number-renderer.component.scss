@@ -1,0 +1,10 @@
+.container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  .chip {
+    background-color: rgb(224, 224, 224);
+    color: black;
+    min-height: 5mm;
+    height: 5mm !important;
+  }
+}

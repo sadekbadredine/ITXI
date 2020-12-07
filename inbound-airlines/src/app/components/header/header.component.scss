@@ -1,0 +1,15 @@
+mat-toolbar {
+  max-height: 50px;
+  background-color: #607d8b;
+  .settings {
+    font-size: 22px;
+  }
+  .menu {
+    margin-left: 1vw;
+  }
+  mat-icon {
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+  }
+}

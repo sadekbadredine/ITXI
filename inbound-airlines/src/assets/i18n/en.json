@@ -1,0 +1,19 @@
+{
+  "INBOUND AIRLINES": "Inbound Airlines {{ value }}",
+  "ADD NEW": "Add new {{ value }}",
+  "AIRLINE CODE": "Airline Code {{ value }}",
+  "AIRLINE NAME": "Ailrine Name {{ value }}",
+  "FLIGHT NUMBERS": "Flight Numbers {{ value }}",
+  "ACTIONS": "Actions {{ value }}",
+  "SWITCH LANGUAGE": "Switch Language {{ value }}",
+  "DARK": "Dark {{ value }}",
+  "LIGHT": "Light {{ value }}",
+  "CANCEL": "Cancle {{ value }}",
+  "SAVE": "Save {{ value }}",
+  "FORM TITLE": "Add/Edit Inbound Airlines {{ value }}",
+  "HEADER TITLE": "Visitors Management Platform {{ value }}",
+  "FILTER": "Filter {{ value }}",
+  "REQUIRED ERROR": "You must enter a value {{ value }}",
+  "MAX LENGTH ERROR": "Airline Code must not exceed 3 characters long {{ value }}",
+  "MIN LENGTH ERROR": "Airline Code must be at least 2 characters long {{ value }}"
+}

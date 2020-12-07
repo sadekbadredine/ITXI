@@ -1,0 +1,48 @@
+<div *ngIf="car">
+  <div>
+    <div class="row">
+      <div class="col-xs-12">
+        <img
+          [src]="car.imagePath"
+          alt=""
+          class="image-responsive"
+          style="max-height: 300px"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>{{ car.name }}</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div appDropdown class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle">
+            Manage Cars <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a id="editCar" [routerLink]="['edit']">Edit Car</a></li>
+            <li><a id="deleteCar" (click)="onDeleteCar()">Delete Car</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="list-group-item clearfix">
+          <h5 class="list-group-item-text" id="year">Year: {{ car.year }}</h5>
+          <h5 class="list-group-item-text" id="color">
+            Color: {{ car.color }}
+          </h5>
+          <h5 class="list-group-item-text" id="horsePower">
+            Horse Power: {{ car.horsePower }}
+          </h5>
+          <h5 class="list-group-item-text" id="cylinder">
+            Cylinder: v{{ car.cylinder }}
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

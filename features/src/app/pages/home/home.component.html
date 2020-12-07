@@ -1,0 +1,35 @@
+<div class="container">
+  <ng-template appDomPosition></ng-template>
+  <div class="red-theme" appChangeTheme [selectedTheme]="theme" #classTheme>
+    <div class="record">
+      <div class="col-1">
+        <button (click)="logOut()" id="logout">Log Out</button>
+        <button (click)="changeTheme()">Change Theme</button>
+      </div>
+    </div>
+    <hr />
+    <div class="record">
+      <div class="col-1" style="text-align: center">
+        <div style="font-size: 25px">Hello {{ user.name }}</div>
+        <div style="font-size: 25px">
+          logged in at : {{ loginTime | date: "shortTime" }}
+        </div>
+      </div>
+    </div>
+    <div class="record">
+      <div class="col-1" style="text-align: center">
+        <div [ngSwitch]="theme">
+          <ng-template ngSwitchCase="theme">
+            <img [src]="getSrc()" style="height: 500px" />
+          </ng-template>
+          <ng-template ngSwitchDefault>
+            <img [src]="getSrc()" style="height: 500px" />
+          </ng-template>
+        </div>
+        <ng-container *appUnless="theme === 'red-theme'">
+          <p>This is the original Angular logo color</p>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

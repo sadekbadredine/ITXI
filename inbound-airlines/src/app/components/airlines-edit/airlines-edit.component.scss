@@ -1,0 +1,50 @@
+.card-dark {
+  mat-card-title {
+    color: white;
+  }
+  input {
+    margin-top: 10px;
+    color: white;
+    font-size: 20px;
+  }
+  mat-error {
+    font-size: medium;
+  }
+  label {
+    color: white;
+  }
+  mat-form-field {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  ::ng-deep {
+    .mat-form-field-appearance-fill .mat-form-field-flex {
+      background-color: rgba(66, 66, 66);
+    }
+  }
+}
+.card-light {
+  mat-card-title {
+    color: black;
+  }
+  input {
+    margin-top: 10px;
+    color: black;
+    font-size: 20px;
+  }
+  mat-error {
+    font-size: medium;
+  }
+  label {
+    color: black;
+  }
+  mat-form-field {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  ::ng-deep {
+    .mat-form-field-appearance-fill .mat-form-field-flex {
+      background-color: white;
+    }
+  }
+}

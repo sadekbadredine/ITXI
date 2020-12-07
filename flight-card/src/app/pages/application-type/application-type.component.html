@@ -1,0 +1,17 @@
+<div class="container" [ngStyle]="backgroundColor">
+  <div><br /></div>
+  <div class="card">
+    <app-flight-card
+      [logo]="flightCard.logo"
+      [title]="flightCard.title"
+      [subtitle]="flightCard.subtitle"
+      [totalPax]="flightCard.totalPaxNumber"
+      [pendingCount]="flightCard.pendingCount"
+      [approvedCount]="flightCard.approvedCount"
+      [rejectedCount]="flightCard.rejectedCount"
+      [questionCount]="flightCard.questionCount"
+      [examineCount]="flightCard.examineCount"
+      [quarantineCount]="flightCard.quarantineCount"
+    ></app-flight-card>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<p style="color: rgb(113, 182, 68); margin-left: 20px">
+  {{ switchLanguageTranslation }}
+</p>
+<form [formGroup]="languageForm" (ngSubmit)="onSubmit()">
+  <mat-radio-group
+    style="margin-left: 20px"
+    aria-labelledby="example-radio-group-label"
+    class="radio-group"
+    formControlName="lang"
+  >
+    <mat-radio-button
+      #radioButton
+      style="color: white; margin-bottom: 15px"
+      [ngStyle]="radioButtonTextStyle"
+      class="radio-button"
+      *ngFor="let language of languages"
+      [value]="language"
+      (change)="getSelectedLanguage(language)"
+      [id]="language"
+    >
+      {{ language }}
+    </mat-radio-button>
+  </mat-radio-group>
+</form>

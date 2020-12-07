@@ -1,0 +1,27 @@
+<div class="parentTransparent">
+    <div class="main" *ngIf="themes">
+      <div class="container">
+        <div class="record" >
+          <form [formGroup]="themeForm" (ngSubmit)="onSubmit()">
+            <div class="col-2">
+              <div *ngFor="let theme of themes">
+                <input type="radio" formControlName="theme" [value]="theme" />{{
+                  theme | prettify
+                }}
+              </div>
+              <button type="submit" [disabled]="!themeForm.valid" style="margin-top: 20px;">Set Theme</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="main" id="alert" *ngIf="message" >
+      <div class="container">
+        <div class="record" style="flex-direction: unset; justify-content: center !important; display: flex;">
+          <p style="margin-right: 50px;"> {{ message }}</p>
+          <button (click)="onClose()">Close</button>
+          </div>
+      </div>
+    </div>
+  </div>
+  

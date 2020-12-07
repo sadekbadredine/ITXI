@@ -1,0 +1,10 @@
+<div class="container">
+  <mat-chip-list>
+    <mat-chip
+      class="chip"
+      *ngFor="let flightNumber of flightNumbers"
+      [ngStyle]="setMargin()"
+      >{{ flightNumber }}</mat-chip
+    >
+  </mat-chip-list>
+</div>

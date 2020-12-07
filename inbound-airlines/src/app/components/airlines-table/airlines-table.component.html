@@ -1,0 +1,46 @@
+<input
+  type="text"
+  [placeholder]="inputPlaceholder"
+  (keyup)="quickSearch()"
+  [(ngModel)]="searchValue"
+  [ngStyle]="inputStyle"
+  style="
+    margin-top: 20px;
+    margin-left: 15px;
+    height: 40px;
+    border-radius: 5px;
+    border: thin solid rgb(48, 48, 48);
+    margin-bottom: 10px;
+    background-color: rgb(48, 48, 48);
+    color: white;
+    font-size: 20px;
+  "
+/>
+<hr
+  [ngStyle]="separatorStyle"
+  style="
+    border: none;
+    height: 1px;
+    margin-left: -16px;
+    margin-bottom: 30px;
+    background-color: rgb(48, 48, 48);
+  "
+/>
+<ag-grid-angular
+  #agGrid
+  [ngStyle]="tableWidthAndHeight"
+  style="width: 950px; height: 400px; margin: 15px"
+  class="ag-theme-alpine-dark"
+  [ngClass]="agGridClass"
+  [columnDefs]="columnDefs"
+  [pagination]="true"
+  [paginationPageSize]="10"
+  (columnResized)="onColumnResized($event)"
+  [defaultColDef]="defaultColDef"
+  [frameworkComponents]="frameworkComponents"
+  (gridReady)="onGridReady($event)"
+  (rowClicked)="onRowClicked($event)"
+  row-selection="multiple"
+>
+</ag-grid-angular>
+<router-outlet></router-outlet>

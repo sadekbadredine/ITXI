@@ -1,0 +1,15 @@
+<mat-sidenav-container fullscreen
+  ><mat-toolbar>
+    <mat-icon class="menu">menu</mat-icon>
+    <span style="color: white; font-size: 21px" id="headerTitle">{{
+      headerTitle
+    }}</span>
+    <mat-icon
+      class="settings"
+      (click)="sideNav.toggleSideNav()"
+      [ngStyle]="settingsIconMargin"
+      >settings</mat-icon
+    >
+  </mat-toolbar>
+  <app-side-nav #sideNav></app-side-nav
+></mat-sidenav-container>
