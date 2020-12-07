@@ -1,0 +1,74 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  border: solid rgb(119, 173, 109) 2px;
+  border-radius: 5px;
+  height: auto;
+  width: 90%;
+  margin: {
+    top: 10px;
+    bottom: auto;
+    left: auto;
+    right: auto;
+  }
+  font {
+    family: Helvetica;
+    size: 16px;
+  }
+  .record {
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+  }
+  button {
+    margin: {
+      bottom: 20px;
+    }
+  }
+
+  .sub {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  button {
+    margin: 10px auto;
+    color: white;
+    background-color: #0275d8;
+    height: 40px;
+    width: 250px;
+    border: {
+      radius: 7px;
+      color: #0275d8;
+    }
+    font: {
+      family: Helvetica;
+      size: 16px;
+    }
+  }
+
+  input {
+    border: 1px solid;
+    border-radius: 5px;
+    height: 25px;
+    margin-bottom: 5px;
+    border-color: cornflowerblue;
+    margin-right: 1px;
+    width: 173px;
+  }
+  label {
+    margin-right: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  select {
+    border-radius: 5px;
+    height: 30px;
+    width: 180px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    border-color: cornflowerblue;
+    option {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<div class="container" style="border: cornflowerblue 1px solid">
+  <button (click)="goBack()">Home</button>
+  <div class="record"><div class="col-1">Personal Example</div></div>
+  <hr />
+  <div class="record">
+    <div class="col-1">
+      <input type="text" #input />
+    </div>
+    <div class="col-1">
+      <button (click)="inputAction(input.value)" style="width: 150px">
+        Click
+      </button>
+    </div>
+  </div>
+</div>

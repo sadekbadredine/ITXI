@@ -1,0 +1,34 @@
+<div class="container" style="margin-bottom: 10px">
+  <div class="record">
+    <div class="sub">
+      <button (click)="enfant.changeMe()" style="float: right">
+        Access with local reference
+      </button>
+      <button (click)="accessChild()" style="float: left">
+        Access with @ViewChild
+      </button>
+    </div>
+    <!-- accessing child components properties with a local reference -->
+    <app-enfant #enfant></app-enfant>
+  </div>
+</div>
+<div class="container">
+  <div class="record">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="serverName">Server Name</label>
+        <input type="text" formControlName="serverName" />
+      </div>
+      <div>
+        <label for="serverType">Server Type</label>
+        <select class="custom-select" formControlName="serverType">
+          <option *ngFor="let serverType of serverTypes" [value]="serverType">
+            {{ serverType }}
+          </option>
+        </select>
+      </div>
+      <button type="submit">Add a new server</button>
+    </form>
+    <app-predecessor></app-predecessor>
+  </div>
+</div>

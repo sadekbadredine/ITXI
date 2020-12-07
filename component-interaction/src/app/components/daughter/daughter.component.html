@@ -1,0 +1,16 @@
+<div class="main">
+  <!-- accessing an element with local reference -->
+  <p>{{ partyAttendee }}</p>
+  <form [formGroup]="ngForm" (ngSubmit)="onSubmit()">
+    <div class="sub">
+      <div class="sub" *ngFor="let option of options">
+        <input
+          type="radio"
+          formControlName="option"
+          [value]="option"
+          (change)="getRadio()"
+        />{{ option }}
+      </div>
+    </div>
+  </form>
+</div>

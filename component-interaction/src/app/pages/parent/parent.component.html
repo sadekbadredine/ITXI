@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="record">
+    <p>the text below was imported via Bound Input</p>
+    <app-child [title]="title"></app-child>
+  </div>
+</div>
+<div class="container">
+  <div class="record">
+    <p>the text below was imported via Bound Input</p>
+    <app-child
+      *ngFor="let memberName of teamMembers"
+      [memberName]="memberName.name"
+    ></app-child>
+  </div>
+</div>
+<div class="container">
+  <div class="record">
+    <p>Stock rate</p>
+    <form [formGroup]="ngForm" (ngSubmit)="onSubmit()">
+      <input
+        type="number"
+        id="number"
+        (keyup)="getRate()"
+        formControlName="stockNumberRepresentation"
+      />
+    </form>
+    <app-son [stockNumberRepresentation]="stockNumberRepresentation"></app-son>
+  </div>
+</div>
+<div class="container" style="border: solid rgb(230, 56, 215) 2px">
+  <div class="record">
+    <p>who is going to the party?</p>
+    <div class="sub">
+      <app-daughter
+        *ngFor="let attendee of partyAttendees"
+        [partyAttendee]="attendee"
+        (partyStatus)="partyStatus($event)"
+      ></app-daughter>
+    </div>
+    <div class="sub" *ngFor="let result of partyResult">
+      <p>{{ result }}</p>
+    </div>
+  </div>
+</div>

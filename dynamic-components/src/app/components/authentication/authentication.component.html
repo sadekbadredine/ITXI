@@ -1,0 +1,29 @@
+<ng-template appDomPosition></ng-template>
+<div class="container">
+  <div class="record">
+    <form [formGroup]="authenticationForm" (ngSubmit)="onSubmit()">
+      <div class="col-1">
+        <label for="email" style="float: left">E-Mail</label>
+        <input type="email" formControlName="email" />
+      </div>
+      <div class="col-1">
+        <label for="password" style="float: left">Password</label>
+        <input type="password" formControlName="password" />
+      </div>
+      <div class="record">
+        <div class="col-2">
+          <button
+            style="margin-right: 3.5rem"
+            (click)="switchAuthenticationMode()"
+            type="button"
+          >
+            Switch to {{ login ? "Log In" : "Sign Up" }}
+          </button>
+          <button (click)="submit()">
+            {{ login ? "Sign Up" : "Log In" }}
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

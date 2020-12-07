@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+$testFlex: cornflowerblue solid 1px;
+.container {
+  padding-top: 25vh;
+  font : {
+    family: Helvetica;
+    size: 18px;
+  }
+  .record {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .col-1 {
+      padding: 10px;
+      // margin-left: 5px;
+      flex: 100%;
+      width: 20rem;
+    }
+    .col-2 {
+      margin-left: 5px;
+    }
+  }
+
+  button {
+    color: white;
+    background-color: #0275d8;
+    height: 40px;
+    margin: 10px;
+    border: {
+      radius: 7px;
+      color: cornflowerblue;
+    }
+    font: inherit;
+  }
+  input {
+    border: 1px solid;
+    border-radius: 5px;
+    height: 32px;
+    margin-bottom: 5px;
+    border-color: cornflowerblue;
+    width: 20rem;
+  }
+}

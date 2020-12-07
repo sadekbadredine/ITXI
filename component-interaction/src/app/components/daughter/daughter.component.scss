@@ -1,0 +1,18 @@
+.main {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  text-align: center;
+  border: solid 1px;
+  border-radius: 5px;
+  // line-height: 75px;
+  font: {
+    size: 15px;
+    family: helvetica;
+  }
+  .sub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

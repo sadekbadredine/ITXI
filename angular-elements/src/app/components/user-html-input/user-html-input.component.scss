@@ -1,0 +1,30 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: cornflowerblue;
+  z-index: 1;
+}
+.element-box-1 {
+  position: fixed;
+  border-radius: 7px;
+  top: 50vh;
+  left: 20vw;
+  width: 60vw;
+  padding: 16px;
+  z-index: 1;
+  background: white;
+  height: 200px;
+}
+.element-box-2 {
+  position: fixed;
+  border-radius: 7px;
+  top: 10vh;
+  left: 20vw;
+  width: 60vw;
+  padding: 16px;
+  z-index: 2;
+  color: white;
+}

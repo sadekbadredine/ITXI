@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+$testFlex: cornflowerblue solid 1px;
+.container {
+  padding: 5px;
+  margin: 5px;
+  // border: $testFlex;
+  height: 93vh;
+
+  font : {
+    family: Helvetica;
+    size: 18px;
+  }
+  .record {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    .col-2 {
+      padding: 10px;
+      margin-left: 5px;
+      flex: 50%;
+      text-align: center;
+    }
+    .col-1 {
+      padding: 10px;
+      margin-left: 5px;
+      flex: 100%;
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .record {
+      flex-direction: column;
+    }
+    .col-2 {
+      flex: 25%;
+    }
+  }
+
+  a {
+    color: blue;
+    text-decoration: none;
+  }
+  button {
+    color: black;
+    // background-color: #0275d8;
+    height: 40px;
+    margin: 10px;
+    border: 2px cornflowerblue solid;
+    border-radius: 7px;
+    font: inherit;
+  }
+  input {
+    border: 1px solid;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    border-color: cornflowerblue;
+    height: 30px;
+    width: 220px;
+  }
+  textarea {
+    border: 1px solid;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    border-color: cornflowerblue;
+  }
+}
